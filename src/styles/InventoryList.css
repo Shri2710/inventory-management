@@ -1,0 +1,38 @@
+.table{
+    margin-left:3%;
+    max-width:95%;
+    margin-top:5%;
+    background: #30302f !important;
+    color:white !important;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.custom-header{
+    background: black;
+    color: yellow !important;
+    width: 100px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.c-wh{
+    color:white !important;
+}
+
+.c-gr{
+    color:grey !important;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+button:enabled{
+    cursor: pointer;
+}

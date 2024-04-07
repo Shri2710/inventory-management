@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { useDispatch, useSelector} from 'react-redux';
 import './App.css';
-
+import { useEffect } from 'react';
+import { fetchInventoryList } from './store/slices/inventoryList';
+import Inventory from './pages/Inventory';
+import DataFetchProgress from './components/DataFecthProgress';
 function App() {
+  const dispatch = useDispatch();
+  const inventory = useSelector(state=> state.inventory);
+  
+  
+  useEffect(()=>{
+     dispatch(fetchInventoryList());
+  },[]);
+
+  if(inventory.isLoading){
+    return <DataFetchProgress msg={"Loading . . . "} />
+  }
+
+  if(inventory.isError){
+    return <DataFetchProgress msg={"Something went wrong Please try after some time"} />
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Inventory />
+    </>
   );
 }
 

@@ -1,0 +1,70 @@
+.popup-container{
+    background: #333332 !important;
+    color:white !important;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    width: 400px;
+}
+
+.close-icon{
+    padding: 5px;
+    color: yellow;
+    border:1px solid #b8b7b6;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.column{
+     display: flex;
+     flex-direction: column;
+}
+
+.name{
+    font-size: 20px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input{
+    background: #52514f;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color:#b8b7b6;
+}
+
+.cancel-btn{
+    font-size: 16px;
+   color: yellow;
+   margin-right: 10px;
+}
+
+.save-btn{
+    padding: 5px;
+    font-size: 16px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+input:focus{
+    outline: none;
+}
+
+button.btn:enabled{
+    color:yellow;
+}
+button.btn:disabled{
+    background: #52514f;
+    padding: 5px 10px;
+    color:#b8b7b6;
+    border-radius: 10px;
+}
